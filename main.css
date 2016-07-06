@@ -1,0 +1,238 @@
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,400italic,700);
+/* General Styles */
+body { background-color: #f1f3f4; font-family: Roboto, Arial, Helvetica, sans-serif; font-weight: 300; font-size: 1.0em; color: #333; margin:20px}
+p, div, ul, li, td, input, select, h1, h2, h3, h4 { font-family: Roboto, Arial, Helvetica, sans-serif; font-weight: 300; font-size: 1.0em; }
+h1 { font-size: 1.8em; color: #333; font-weight: 300 }
+h2 { font-size: 1.5em; color: #00aeec; font-weight: 300 }
+h3 { font-size: 1.2em; color: #636363; font-weight: 300 }
+a:active, a:link, a:visited { font-weight: 300; text-decoration: none; color: #00aeec; outline: none!important; }
+a:hover { color: #75ba20 }
+/* Buttons and Statuses */
+a.button:active, a.button:link, a.button:visited, span.button, input.button, button.button { background-color: #636363; color: #fff; display: inline-block; margin: 0; padding: 4px 8px; text-align: center; text-decoration: none; width: auto; border:0; font-weight: 300; font-family: Roboto, Arial, Helvetica, sans-serif; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+a.button:hover, span.button:hover, input.button:hover, button.button:hover { background-color: #333; color: #fff; cursor: pointer }
+.box { border: 1px dotted #ccc; padding: 10px; margin: 10px 25px; width:200px; background-color: #fff }
+.boxer { border: 1px dotted #ccc; padding: 10px; margin: 10px 25px; width:300px; background-color: #fff }
+.boxer p{
+	display: inline;
+    padding: 20px;
+    }
+#result{
+	display: none;
+}
+.help-tip{
+	position: absolute;
+	top: 55.5%;
+	left: 11.5%;
+	text-align: center;
+	background-color: orange;
+	border-radius: 50%;
+	width: 13px;
+	height: 13px;
+	font-size: 10px;
+	line-height: 14px;
+	cursor: default;
+}
+
+.help-tip:before{
+	content:'?';
+	font-weight: bold;
+	color:#fff;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+}
+.close {
+	background: #FFFFFF;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+}
+.row{
+	padding: 3%;
+}
+
+.switch-toggle a,
+.switch-light span span {
+  display: none; }
+
+@media only screen {
+
+  .switch-light {
+    position: relative;
+    display: block;
+}
+    .switch-light::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .switch-light *,
+    .switch-light *:before,
+    .switch-light *:after {
+      box-sizing: border-box; }
+    .switch-light a {
+      display: block;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out; }
+    .switch-light label,
+    .switch-light > span {
+      line-height: 2em;
+      vertical-align: middle; }
+    .switch-light input:focus ~ span a,
+    .switch-light input:focus + label {
+      outline-width: 2px;
+      outline-style: solid;
+      outline-color: Highlight;
+} }
+
+
+@media only screen {
+  .switch-light input {
+    position: absolute;
+    opacity: 0;
+    z-index: 3; 
+}
+  .switch-light input:checked ~ span a {
+    right: 0%; 
+}
+  .switch-light strong {
+    font-weight: inherit; }
+  .switch-light > span {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    min-height: 2em;
+    padding: 0;
+    text-align: left; }
+  .switch-light span span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    float: left;
+    width: 50%;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .switch-light a {
+    position: absolute;
+    right: 50%;
+    top: 0;
+    z-index: 1;
+    display: block;
+    width: 50%;
+    height: 100%;
+    padding: 0; }
+
+  .switch-toggle {
+    position: relative;
+    display: block;
+    padding: 0 !important;
+}
+    .switch-toggle::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .switch-toggle *,
+    .switch-toggle *:before,
+    .switch-toggle *:after {
+      box-sizing: border-box; }
+    .switch-toggle a {
+      display: block;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out; }
+    .switch-toggle label,
+    .switch-toggle > span {
+   
+      line-height: 2em;
+      vertical-align: middle; }
+    .switch-toggle input:focus ~ span a,
+    .switch-toggle input:focus + label {
+      outline-width: 2px;
+      outline-style: solid;
+      outline-color: Highlight;
+    } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 0) {
+      .switch-toggle input:focus ~ span a,
+      .switch-toggle input:focus + label {
+        outline-color: -webkit-focus-ring-color;
+        outline-style: auto; } }
+  .switch-toggle.switch-holo,
+  .switch-light.switch-holo > span {
+    background-color: lightgrey;
+    border-radius: 5px;
+        color: #fff;
+    text-transform: uppercase; 
+	width: 150px;
+}
+  .switch-holo label {
+    color: #fff; }
+  .switch-holo > span span {
+    opacity: 0;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s; }
+    .switch-holo > span span:first-of-type {
+      opacity: 1; }
+  .switch-holo > span span,
+  .switch-holo label {
+    font-size: 85%;
+    line-height: 2.5em; }
+  .switch-holo a {
+    background-color: #666;
+    border-radius: 1px;
+     }
+  .switch-holo.switch-light input:checked ~ span a {
+    background-color: red; }
+    .switch-holo.switch-light input ~ span a {
+    background-color: green; }
+  .switch-holo.switch-light input:checked ~ span span:first-of-type {
+    opacity: 0; }
+  .switch-holo.switch-light input:checked ~ span span:last-of-type {
+    opacity: 1; }
+ 
+  
+  
+
+
+
+
+
+
+
+
